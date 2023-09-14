@@ -32,22 +32,34 @@ namespace App_The_Second
 
             // CPU
             string CPU = textBox2.Text;
-            Regex list = new Regex(string.Format("{0}~(.*?)$", CPU), RegexOptions.IgnoreCase);
-            MatchCollection listmatch = list.Matches(File.ReadAllText(@"../../CPU.list"));
+            Regex list = new Regex(string.Format("{0}~(.*?)\r", CPU), RegexOptions.IgnoreCase);
+            string file = File.ReadAllText(@"../../CPU.list");
+            MatchCollection listmatch = list.Matches(file);
             Match match = listmatch[0];
             GroupCollection group = match.Groups;
             int CPUscore = int.Parse(group[0].Value.Split('~')[1]);
 
             // GPU
-            string GPU = textBox3.Text;
-            Regex GPUlist = new Regex(string.Format("{0}~(.*?)$", GPU), RegexOptions.IgnoreCase);
-            MatchCollection GPUlistmatch = GPUlist.Matches(File.ReadAllText(@"../../GPU.list"));
-            Match GPUmatch = GPUlistmatch[0];
-            GroupCollection GPUgroup = GPUmatch.Groups;
-            int GPUscore = int.Parse(GPUgroup[0].Value.Split('~')[1]);
+            string GPU = textBox4.Text;
+            // Check if string is a number
+            int n;
+            bool isNumeric = int.TryParse(GPU, out n);
+            if (isNumeric)
+            {
+                int GPUscore = int.Parse(GPU);
+            }
+            else
+            {
+                Regex GPUlist = new Regex(string.Format("{0}~(.*?)\r", GPU), RegexOptions.IgnoreCase);
+                string GPUfile = File.ReadAllText(@"../../GPU.list");
+                MatchCollection GPUlistmatch = GPUlist.Matches(GPUfile);
+                Match GPUmatch = GPUlistmatch[0];
+                GroupCollection GPUgroup = GPUmatch.Groups;
+                int GPUscore = int.Parse(GPUgroup[0].Value.Split('~')[1]);
+            }
 
             // Storage
-            int GB = int.Parse(textBox4.Text);
+            int GB = int.Parse(textBox3.Text);
 
             // Work out and display score
             int Score = ((RAM * (RAMType * 75)) + CPUscore + GPUscore) / 100;
