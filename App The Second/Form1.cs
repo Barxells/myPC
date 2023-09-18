@@ -37,16 +37,18 @@ namespace App_The_Second
             MatchCollection listmatch = list.Matches(file);
             Match match = listmatch[0];
             GroupCollection group = match.Groups;
-            int CPUscore = int.Parse(group[0].Value.Split('~')[1]);
+            int CPUscore = int.Parse(group[0].Value.Split('~')[1].Replace(",", ""));
 
             // GPU
             string GPU = textBox4.Text;
             // Check if string is a number
             int n;
             bool isNumeric = int.TryParse(GPU, out n);
+            int GPUscore;
             if (isNumeric)
             {
-                int GPUscore = int.Parse(GPU);
+                int v = int.Parse(GPU);
+                GPUscore = v;
             }
             else
             {
@@ -55,7 +57,7 @@ namespace App_The_Second
                 MatchCollection GPUlistmatch = GPUlist.Matches(GPUfile);
                 Match GPUmatch = GPUlistmatch[0];
                 GroupCollection GPUgroup = GPUmatch.Groups;
-                int GPUscore = int.Parse(GPUgroup[0].Value.Split('~')[1]);
+                GPUscore = int.Parse(GPUgroup[0].Value.Split('~')[1].Replace(",", ""));
             }
 
             // Storage
