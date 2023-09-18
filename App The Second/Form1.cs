@@ -52,7 +52,7 @@ namespace App_The_Second
             }
             else
             {
-                Regex GPUlist = new Regex(string.Format("{0}~(.*?)\r", GPU), RegexOptions.IgnoreCase);
+                Regex GPUlist = new Regex(string.Format("{0}~(.*?)\n", GPU), RegexOptions.IgnoreCase);
                 string GPUfile = File.ReadAllText(@"../../GPU.list");
                 MatchCollection GPUlistmatch = GPUlist.Matches(GPUfile);
                 Match GPUmatch = GPUlistmatch[0];
