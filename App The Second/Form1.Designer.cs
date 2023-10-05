@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gsReset = new System.Windows.Forms.Button();
             this.gsPanel = new System.Windows.Forms.Panel();
-            this.gsRAMType = new System.Windows.Forms.ListBox();
             this.gsGB = new System.Windows.Forms.TextBox();
             this.gsCPU = new System.Windows.Forms.TextBox();
             this.gsCPUlabel = new System.Windows.Forms.Label();
@@ -59,17 +57,32 @@
             this.gsGO = new System.Windows.Forms.Button();
             this.gsText = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.snRAMType = new System.Windows.Forms.ComboBox();
+            this.presetPC = new System.Windows.Forms.TabPage();
+            this.gsRAMType = new System.Windows.Forms.ComboBox();
+            this.presetPresets = new System.Windows.Forms.ComboBox();
+            this.presetPanel = new System.Windows.Forms.Panel();
+            this.presetCPUlabel = new System.Windows.Forms.Label();
+            this.presetGPUlabel = new System.Windows.Forms.Label();
+            this.presetRAMlabel = new System.Windows.Forms.Label();
+            this.presetScorelabel = new System.Windows.Forms.Label();
+            this.presetShowGamingInfo = new System.Windows.Forms.CheckBox();
+            this.presetGamingText = new System.Windows.Forms.Label();
+            this.disclaimer = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.gsPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.presetPC.SuspendLayout();
+            this.presetPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.disclaimer);
+            this.tabPage1.Controls.Add(this.snRAMType);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.textBox4);
@@ -90,25 +103,9 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Spec Number";
             // 
-            // listBox1
-            // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.IntegralHeight = false;
-            this.listBox1.Items.AddRange(new object[] {
-            "DDR2",
-            "DDR3",
-            "DDR4",
-            "DDR5"});
-            this.listBox1.Location = new System.Drawing.Point(155, 158);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(122, 59);
-            this.listBox1.TabIndex = 14;
-            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 231);
+            this.textBox2.Location = new System.Drawing.Point(154, 186);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(122, 20);
             this.textBox2.TabIndex = 1;
@@ -122,14 +119,14 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(155, 261);
+            this.textBox4.Location = new System.Drawing.Point(154, 216);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(122, 20);
             this.textBox4.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(155, 291);
+            this.textBox3.Location = new System.Drawing.Point(154, 246);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(122, 20);
             this.textBox3.TabIndex = 3;
@@ -148,7 +145,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(159, 399);
+            this.label6.Location = new System.Drawing.Point(156, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 11;
@@ -159,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(159, 373);
+            this.label5.Location = new System.Drawing.Point(156, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 9;
@@ -170,7 +167,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(140, 326);
+            this.button1.Location = new System.Drawing.Point(139, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -182,7 +179,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(83, 294);
+            this.label4.Location = new System.Drawing.Point(82, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 7;
@@ -202,7 +199,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(83, 264);
+            this.label3.Location = new System.Drawing.Point(82, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 6;
@@ -212,7 +209,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(83, 234);
+            this.label2.Location = new System.Drawing.Point(82, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 5;
@@ -220,7 +217,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(117, 373);
+            this.progressBar1.Location = new System.Drawing.Point(114, 327);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(127, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -266,35 +263,19 @@
             this.gsPanel.Controls.Add(this.gsGO);
             this.gsPanel.Location = new System.Drawing.Point(53, 106);
             this.gsPanel.Name = "gsPanel";
-            this.gsPanel.Size = new System.Drawing.Size(250, 258);
+            this.gsPanel.Size = new System.Drawing.Size(250, 229);
             this.gsPanel.TabIndex = 30;
-            // 
-            // gsRAMType
-            // 
-            this.gsRAMType.AllowDrop = true;
-            this.gsRAMType.FormattingEnabled = true;
-            this.gsRAMType.IntegralHeight = false;
-            this.gsRAMType.Items.AddRange(new object[] {
-            "DDR2",
-            "DDR3",
-            "DDR4",
-            "DDR5"});
-            this.gsRAMType.Location = new System.Drawing.Point(103, 49);
-            this.gsRAMType.Margin = new System.Windows.Forms.Padding(1);
-            this.gsRAMType.Name = "gsRAMType";
-            this.gsRAMType.Size = new System.Drawing.Size(122, 56);
-            this.gsRAMType.TabIndex = 28;
             // 
             // gsGB
             // 
-            this.gsGB.Location = new System.Drawing.Point(103, 175);
+            this.gsGB.Location = new System.Drawing.Point(103, 137);
             this.gsGB.Name = "gsGB";
             this.gsGB.Size = new System.Drawing.Size(122, 20);
             this.gsGB.TabIndex = 18;
             // 
             // gsCPU
             // 
-            this.gsCPU.Location = new System.Drawing.Point(103, 115);
+            this.gsCPU.Location = new System.Drawing.Point(103, 77);
             this.gsCPU.Name = "gsCPU";
             this.gsCPU.Size = new System.Drawing.Size(122, 20);
             this.gsCPU.TabIndex = 16;
@@ -303,7 +284,7 @@
             // 
             this.gsCPUlabel.AutoSize = true;
             this.gsCPUlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsCPUlabel.Location = new System.Drawing.Point(31, 118);
+            this.gsCPUlabel.Location = new System.Drawing.Point(31, 80);
             this.gsCPUlabel.Name = "gsCPUlabel";
             this.gsCPUlabel.Size = new System.Drawing.Size(29, 13);
             this.gsCPUlabel.TabIndex = 20;
@@ -320,7 +301,7 @@
             // 
             this.gsGPUlabel.AutoSize = true;
             this.gsGPUlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsGPUlabel.Location = new System.Drawing.Point(31, 148);
+            this.gsGPUlabel.Location = new System.Drawing.Point(31, 110);
             this.gsGPUlabel.Name = "gsGPUlabel";
             this.gsGPUlabel.Size = new System.Drawing.Size(30, 13);
             this.gsGPUlabel.TabIndex = 21;
@@ -328,7 +309,7 @@
             // 
             // gsGPU
             // 
-            this.gsGPU.Location = new System.Drawing.Point(103, 145);
+            this.gsGPU.Location = new System.Drawing.Point(103, 107);
             this.gsGPU.Name = "gsGPU";
             this.gsGPU.Size = new System.Drawing.Size(122, 20);
             this.gsGPU.TabIndex = 17;
@@ -347,7 +328,7 @@
             // 
             this.gsGBlabel.AutoSize = true;
             this.gsGBlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsGBlabel.Location = new System.Drawing.Point(31, 178);
+            this.gsGBlabel.Location = new System.Drawing.Point(31, 140);
             this.gsGBlabel.Name = "gsGBlabel";
             this.gsGBlabel.Size = new System.Drawing.Size(68, 13);
             this.gsGBlabel.TabIndex = 22;
@@ -367,7 +348,7 @@
             // 
             this.gsGO.BackColor = System.Drawing.Color.White;
             this.gsGO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gsGO.Location = new System.Drawing.Point(87, 226);
+            this.gsGO.Location = new System.Drawing.Point(87, 188);
             this.gsGO.Name = "gsGO";
             this.gsGO.Size = new System.Drawing.Size(75, 23);
             this.gsGO.TabIndex = 23;
@@ -387,7 +368,7 @@
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.presetPC);
             this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -395,14 +376,151 @@
             this.tabControl1.Size = new System.Drawing.Size(363, 525);
             this.tabControl1.TabIndex = 15;
             // 
-            // tabPage3
+            // snRAMType
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(355, 496);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Games (Spec No.)";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.snRAMType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.snRAMType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.snRAMType.FormattingEnabled = true;
+            this.snRAMType.Items.AddRange(new object[] {
+            "DDR2",
+            "DDR3",
+            "DDR4",
+            "DDR5"});
+            this.snRAMType.Location = new System.Drawing.Point(155, 159);
+            this.snRAMType.MaxLength = 4;
+            this.snRAMType.Name = "snRAMType";
+            this.snRAMType.Size = new System.Drawing.Size(121, 21);
+            this.snRAMType.TabIndex = 14;
+            // 
+            // presetPC
+            // 
+            this.presetPC.Controls.Add(this.label8);
+            this.presetPC.Controls.Add(this.presetPanel);
+            this.presetPC.Controls.Add(this.presetPresets);
+            this.presetPC.Location = new System.Drawing.Point(4, 25);
+            this.presetPC.Name = "presetPC";
+            this.presetPC.Size = new System.Drawing.Size(355, 496);
+            this.presetPC.TabIndex = 3;
+            this.presetPC.Text = "Presets";
+            this.presetPC.UseVisualStyleBackColor = true;
+            // 
+            // gsRAMType
+            // 
+            this.gsRAMType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.gsRAMType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.gsRAMType.FormattingEnabled = true;
+            this.gsRAMType.Items.AddRange(new object[] {
+            "DDR2",
+            "DDR3",
+            "DDR4",
+            "DDR5"});
+            this.gsRAMType.Location = new System.Drawing.Point(104, 50);
+            this.gsRAMType.MaxLength = 4;
+            this.gsRAMType.Name = "gsRAMType";
+            this.gsRAMType.Size = new System.Drawing.Size(121, 21);
+            this.gsRAMType.TabIndex = 28;
+            // 
+            // presetPresets
+            // 
+            this.presetPresets.FormattingEnabled = true;
+            this.presetPresets.Items.AddRange(new object[] {
+            "Asus Nitro 5 2019 8GB",
+            "Lenovo ThinkPad X270",
+            "PlayStation 5"});
+            this.presetPresets.Location = new System.Drawing.Point(8, 11);
+            this.presetPresets.Name = "presetPresets";
+            this.presetPresets.Size = new System.Drawing.Size(339, 21);
+            this.presetPresets.TabIndex = 0;
+            this.presetPresets.SelectedIndexChanged += new System.EventHandler(this.presetPresets_SelectedIndexChanged);
+            // 
+            // presetPanel
+            // 
+            this.presetPanel.Controls.Add(this.presetGamingText);
+            this.presetPanel.Controls.Add(this.presetShowGamingInfo);
+            this.presetPanel.Controls.Add(this.presetScorelabel);
+            this.presetPanel.Controls.Add(this.presetRAMlabel);
+            this.presetPanel.Controls.Add(this.presetGPUlabel);
+            this.presetPanel.Controls.Add(this.presetCPUlabel);
+            this.presetPanel.Location = new System.Drawing.Point(8, 38);
+            this.presetPanel.Name = "presetPanel";
+            this.presetPanel.Size = new System.Drawing.Size(339, 448);
+            this.presetPanel.TabIndex = 1;
+            this.presetPanel.Visible = false;
+            // 
+            // presetCPUlabel
+            // 
+            this.presetCPUlabel.AutoSize = true;
+            this.presetCPUlabel.Location = new System.Drawing.Point(18, 20);
+            this.presetCPUlabel.Name = "presetCPUlabel";
+            this.presetCPUlabel.Size = new System.Drawing.Size(35, 13);
+            this.presetCPUlabel.TabIndex = 2;
+            this.presetCPUlabel.Text = "label8";
+            // 
+            // presetGPUlabel
+            // 
+            this.presetGPUlabel.AutoSize = true;
+            this.presetGPUlabel.Location = new System.Drawing.Point(18, 40);
+            this.presetGPUlabel.Name = "presetGPUlabel";
+            this.presetGPUlabel.Size = new System.Drawing.Size(35, 13);
+            this.presetGPUlabel.TabIndex = 3;
+            this.presetGPUlabel.Text = "label8";
+            // 
+            // presetRAMlabel
+            // 
+            this.presetRAMlabel.AutoSize = true;
+            this.presetRAMlabel.Location = new System.Drawing.Point(18, 60);
+            this.presetRAMlabel.Name = "presetRAMlabel";
+            this.presetRAMlabel.Size = new System.Drawing.Size(35, 13);
+            this.presetRAMlabel.TabIndex = 4;
+            this.presetRAMlabel.Text = "label8";
+            // 
+            // presetScorelabel
+            // 
+            this.presetScorelabel.AutoSize = true;
+            this.presetScorelabel.Location = new System.Drawing.Point(18, 80);
+            this.presetScorelabel.Name = "presetScorelabel";
+            this.presetScorelabel.Size = new System.Drawing.Size(35, 13);
+            this.presetScorelabel.TabIndex = 6;
+            this.presetScorelabel.Text = "label8";
+            // 
+            // presetShowGamingInfo
+            // 
+            this.presetShowGamingInfo.AutoSize = true;
+            this.presetShowGamingInfo.Location = new System.Drawing.Point(21, 100);
+            this.presetShowGamingInfo.Name = "presetShowGamingInfo";
+            this.presetShowGamingInfo.Size = new System.Drawing.Size(119, 17);
+            this.presetShowGamingInfo.TabIndex = 2;
+            this.presetShowGamingInfo.Text = "Show Gaming Info?";
+            this.presetShowGamingInfo.UseVisualStyleBackColor = true;
+            this.presetShowGamingInfo.CheckedChanged += new System.EventHandler(this.presetShowGamingInfo_CheckedChanged);
+            // 
+            // presetGamingText
+            // 
+            this.presetGamingText.Location = new System.Drawing.Point(18, 140);
+            this.presetGamingText.Name = "presetGamingText";
+            this.presetGamingText.Size = new System.Drawing.Size(305, 288);
+            this.presetGamingText.TabIndex = 7;
+            this.presetGamingText.Visible = false;
+            // 
+            // disclaimer
+            // 
+            this.disclaimer.Location = new System.Drawing.Point(7, 466);
+            this.disclaimer.Name = "disclaimer";
+            this.disclaimer.Size = new System.Drawing.Size(341, 30);
+            this.disclaimer.TabIndex = 15;
+            this.disclaimer.Text = "Scores should only be used as references. They\'re not 100% technically correct, b" +
+    "ut they\'re pretty damn close";
+            this.disclaimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(7, 466);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(341, 30);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Scores should only be used as references. They\'re not 100% technically correct, b" +
+    "ut they\'re pretty damn close";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -419,6 +537,9 @@
             this.gsPanel.ResumeLayout(false);
             this.gsPanel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.presetPC.ResumeLayout(false);
+            this.presetPanel.ResumeLayout(false);
+            this.presetPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -426,7 +547,6 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
@@ -442,8 +562,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ListBox gsRAMType;
         private System.Windows.Forms.TextBox gsCPU;
         private System.Windows.Forms.TextBox gsRAM;
         private System.Windows.Forms.TextBox gsGPU;
@@ -457,6 +575,19 @@
         private System.Windows.Forms.Label gsText;
         private System.Windows.Forms.Panel gsPanel;
         private System.Windows.Forms.Button gsReset;
+        private System.Windows.Forms.ComboBox snRAMType;
+        private System.Windows.Forms.TabPage presetPC;
+        private System.Windows.Forms.ComboBox gsRAMType;
+        private System.Windows.Forms.Panel presetPanel;
+        private System.Windows.Forms.ComboBox presetPresets;
+        private System.Windows.Forms.Label presetRAMlabel;
+        private System.Windows.Forms.Label presetGPUlabel;
+        private System.Windows.Forms.Label presetCPUlabel;
+        private System.Windows.Forms.Label presetScorelabel;
+        private System.Windows.Forms.CheckBox presetShowGamingInfo;
+        private System.Windows.Forms.Label presetGamingText;
+        private System.Windows.Forms.Label disclaimer;
+        private System.Windows.Forms.Label label8;
     }
 }
 
