@@ -5,5 +5,9 @@ aka. pyPC, myPC is a PC specification calculation software, you input the specif
 To install simply go to releases...
 
 ## Usage
-To use the program you simply open the application put in your amount of RAM, RAM Type, CPU Name, GPU Name, and amount of Storage.
-The software then uses an algorithm to calculate the spec score of your PC.
+### Spec Number
+The spec number tab calculates a spec number when given a PCs specs. This number is useful for rating a PCs performance
+
+### Games (Specs)
+This tab works out how well a PC can play some games given a PCs specs. The current games are:
+- Minecraft: Java Edition- Grand Theft Auto V### PresetsThis tab shows you specs and spec scores for some presets. It can also show how well those presets play the games mentioned above.
