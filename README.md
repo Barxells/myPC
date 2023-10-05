@@ -2,7 +2,7 @@
 aka. pyPC, myPC is a PC specification calculation software, you input the specifications of a PC and it will give the PC a score in a human-readable format.
 
 ## Installation
-To install simply go to releases...
+To install simply download the .zip file from releases, extract it and run setup.exe
 
 ## Usage
 ### Spec Number
