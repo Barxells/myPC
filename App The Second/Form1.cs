@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace App_The_Second
 {
@@ -12,8 +14,45 @@ namespace App_The_Second
         public Form1()
         {
             InitializeComponent();
+            loadPresets();
         }
 
+        private void loadPresets()
+        {
+            // Check if presets.dll exists
+            if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC/presets.dll")))
+            {
+                // Get info from presets.dll
+                string[] lines = File.ReadAllLines(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+, "myPC/presets.dll"));
+                // Presets are in format: NAME~CPU~GPU~RAM~RAMTYPE
+                foreach (string line in lines)
+                {
+                    string[] preset = line.Split('~');
+                    presetPresets.Items.Add(preset[0]);
+                    int indextoadd = importedPresets.Length;
+                    Array.Resize(ref importedPresets, importedPresets.Length + 1);
+                    importedPresets[indextoadd] = preset;
+                    anyImportedPresets = true;
+                }
+            }
+        }
+
+        private void enterer1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void enterer2(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                gsGO.PerformClick();
+            }
+        }
         private int calculateSpecScore(string CPU, string GPU, string RAM, string RAMType, string Storage)
         {
             int Score = (int.Parse(RAM) * 300) + (getCPUScore(CPU) * 3) + (getGPUScore(GPU) * 4) + int.Parse(RAMType.Replace("DDR", ""));
@@ -25,7 +64,7 @@ namespace App_The_Second
             try
             {
                 Regex regex = new Regex(string.Format("{0}~(.*?)\r", CPU), RegexOptions.IgnoreCase);
-                string file = File.ReadAllText(@"../../CPU.list");
+                string file = cpuList;
                 MatchCollection matches = regex.Matches(file);
                 Match match = matches[0];
                 GroupCollection group = match.Groups;
@@ -43,7 +82,7 @@ namespace App_The_Second
             try
             {
                 Regex regex = new Regex(string.Format("{0}~(.*?)\n", GPU), RegexOptions.IgnoreCase);
-                string file = File.ReadAllText(@"../../GPU.list");
+                string file = gpuList;
                 MatchCollection matches = regex.Matches(file);
                 Match match = matches[0];
                 GroupCollection group = match.Groups;
@@ -165,7 +204,7 @@ namespace App_The_Second
                     try
                     {
                         Regex list = new Regex(string.Format("{0}~(.*?)\r", CPU), RegexOptions.IgnoreCase);
-                        string file = File.ReadAllText(@"../../CPU.list");
+                        string file = cpuList;
                         MatchCollection listmatch = list.Matches(file);
                         Match match = listmatch[0];
                         GroupCollection group = match.Groups;
@@ -193,7 +232,7 @@ namespace App_The_Second
                     try
                     {
                         Regex GPUlist = new Regex(string.Format("{0}~(.*?)\n", GPU), RegexOptions.IgnoreCase);
-                        string GPUfile = File.ReadAllText(@"../../GPU.list");
+                        string GPUfile = gpuList;
                         MatchCollection GPUlistmatch = GPUlist.Matches(GPUfile);
                         Match GPUmatch = GPUlistmatch[0];
                         GroupCollection GPUgroup = GPUmatch.Groups;
@@ -276,7 +315,15 @@ namespace App_The_Second
             presets.Add("Asus Nitro 5 2019 8GB", new string[] { "Intel Core i5-9300H", "GeForce GTX 1650", "8", "DDR4" });
             presets.Add("Lenovo ThinkPad X270", new string[] { "Intel Core i5-7200U", "Intel HD Graphics 620", "8", "DDR4" });
             presets.Add("PlayStation 5", new string[] { "AMD Ryzen 7 3700X", "GeForce RTX 2050", "16", "DDR4" });
-            // Add more presets later
+            if (anyImportedPresets)
+            {
+                foreach (string[] preset in importedPresets)
+                {
+                    string presetName = preset[0];
+                    string[] presetValues = new string[] { preset[1], preset[2], preset[3], preset[4] };
+                    presets.Add(presetName, presetValues);
+                }
+            }
             foreach (KeyValuePair<string, string[]> preset in presets)
             {
                 string presetName = preset.Key;
@@ -362,6 +409,85 @@ namespace App_The_Second
             {
                 presetGamingText.Visible = false;
             }
+        }
+
+        private void importButton_Click(object sender, EventArgs e)
+        {
+            // Let user select a file with .pcspec extension
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "PC Spec File|*.pcspec";
+            openFileDialog1.Title = "Select a PC Spec File";
+            openFileDialog1.ShowDialog();
+
+            // If user selects a file
+            async void importFile()
+            {
+                // Get data from file and save to presets.dll
+                string[] lines = File.ReadAllLines(openFileDialog1.FileName);
+                foreach (string line in lines)
+                {
+                    string presetString = line + "\r\n";
+                    try
+                    {
+                        File.AppendAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+    , "myPC/presets.dll"), presetString);
+                    } catch (DirectoryNotFoundException)
+                    {
+                        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC"));
+                        File.AppendAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC/presets.dll"), presetString);
+                    }
+
+                    int indextoadd = importedPresets.Length;
+                    Array.Resize(ref importedPresets, importedPresets.Length + 1);
+                    importedPresets[indextoadd] = line.Split('~');
+
+                    presetPresets.Items.Add(line.Split('~')[0]);
+
+                    anyImportedPresets = true;
+                }
+            }
+
+            if (openFileDialog1.FileName != "")
+            {
+                importFile();
+            }
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            // Give the PC a name
+            string PCName = Interaction.InputBox("What would you like to name your PC?", "Name your PC", "My PC", 0, 0);
+            // Export current specs to a .pcspec file in the format: CPU~GPU~RAM~RAMType
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PC Spec File|*.pcspec";
+            saveFileDialog1.Title = "Save your PC Spec File";
+
+            string RAM = textBox1.Text;
+            string RAMType = snRAMType.Text;
+            string CPU = textBox2.Text;
+            string GPU = textBox4.Text;
+
+            string line = PCName + "~" + CPU + "~" + GPU + "~" + RAM + "~" + RAMType;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog1.FileName, line);
+            }
+        }
+
+        private void resetPresets_Click(object sender, EventArgs e)
+        {
+            // Delete presets.dll and close the program
+            try
+            {
+                File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+  , "myPC/presets.dll"));
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC"));
+                File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC/presets.dll"));
+            }
+            Application.Exit();
         }
     }
 }
