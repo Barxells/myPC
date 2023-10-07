@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.exportButton = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.gsText = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.presetPC = new System.Windows.Forms.TabPage();
-            this.importButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.presetPanel = new System.Windows.Forms.Panel();
             this.presetGamingText = new System.Windows.Forms.Label();
@@ -74,6 +74,8 @@
             this.presetCPUlabel = new System.Windows.Forms.Label();
             this.presetPresets = new System.Windows.Forms.ComboBox();
             this.resetPresets = new System.Windows.Forms.Button();
+            this.importButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.gsPanel.SuspendLayout();
@@ -179,7 +181,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(83, 162);
+            this.label7.Location = new System.Drawing.Point(82, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 13;
@@ -233,7 +235,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(83, 131);
+            this.label1.Location = new System.Drawing.Point(82, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
@@ -320,7 +322,7 @@
             "DDR3",
             "DDR4",
             "DDR5"});
-            this.gsRAMType.Location = new System.Drawing.Point(104, 50);
+            this.gsRAMType.Location = new System.Drawing.Point(102, 53);
             this.gsRAMType.MaxLength = 4;
             this.gsRAMType.Name = "gsRAMType";
             this.gsRAMType.Size = new System.Drawing.Size(121, 21);
@@ -328,14 +330,14 @@
             // 
             // gsGB
             // 
-            this.gsGB.Location = new System.Drawing.Point(103, 137);
+            this.gsGB.Location = new System.Drawing.Point(101, 140);
             this.gsGB.Name = "gsGB";
             this.gsGB.Size = new System.Drawing.Size(122, 20);
             this.gsGB.TabIndex = 18;
             // 
             // gsCPU
             // 
-            this.gsCPU.Location = new System.Drawing.Point(103, 77);
+            this.gsCPU.Location = new System.Drawing.Point(101, 80);
             this.gsCPU.Name = "gsCPU";
             this.gsCPU.Size = new System.Drawing.Size(122, 20);
             this.gsCPU.TabIndex = 16;
@@ -345,7 +347,7 @@
             // 
             this.gsCPUlabel.AutoSize = true;
             this.gsCPUlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsCPUlabel.Location = new System.Drawing.Point(31, 80);
+            this.gsCPUlabel.Location = new System.Drawing.Point(29, 83);
             this.gsCPUlabel.Name = "gsCPUlabel";
             this.gsCPUlabel.Size = new System.Drawing.Size(29, 13);
             this.gsCPUlabel.TabIndex = 20;
@@ -353,7 +355,7 @@
             // 
             // gsRAM
             // 
-            this.gsRAM.Location = new System.Drawing.Point(103, 19);
+            this.gsRAM.Location = new System.Drawing.Point(101, 22);
             this.gsRAM.Name = "gsRAM";
             this.gsRAM.Size = new System.Drawing.Size(122, 20);
             this.gsRAM.TabIndex = 15;
@@ -362,7 +364,7 @@
             // 
             this.gsGPUlabel.AutoSize = true;
             this.gsGPUlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsGPUlabel.Location = new System.Drawing.Point(31, 110);
+            this.gsGPUlabel.Location = new System.Drawing.Point(29, 113);
             this.gsGPUlabel.Name = "gsGPUlabel";
             this.gsGPUlabel.Size = new System.Drawing.Size(30, 13);
             this.gsGPUlabel.TabIndex = 21;
@@ -370,7 +372,7 @@
             // 
             // gsGPU
             // 
-            this.gsGPU.Location = new System.Drawing.Point(103, 107);
+            this.gsGPU.Location = new System.Drawing.Point(101, 110);
             this.gsGPU.Name = "gsGPU";
             this.gsGPU.Size = new System.Drawing.Size(122, 20);
             this.gsGPU.TabIndex = 17;
@@ -379,7 +381,7 @@
             // 
             this.gsRAMlabel.AutoSize = true;
             this.gsRAMlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsRAMlabel.Location = new System.Drawing.Point(31, 22);
+            this.gsRAMlabel.Location = new System.Drawing.Point(29, 25);
             this.gsRAMlabel.Name = "gsRAMlabel";
             this.gsRAMlabel.Size = new System.Drawing.Size(55, 13);
             this.gsRAMlabel.TabIndex = 19;
@@ -389,7 +391,7 @@
             // 
             this.gsGBlabel.AutoSize = true;
             this.gsGBlabel.ForeColor = System.Drawing.Color.Black;
-            this.gsGBlabel.Location = new System.Drawing.Point(31, 140);
+            this.gsGBlabel.Location = new System.Drawing.Point(29, 143);
             this.gsGBlabel.Name = "gsGBlabel";
             this.gsGBlabel.Size = new System.Drawing.Size(68, 13);
             this.gsGBlabel.TabIndex = 22;
@@ -399,7 +401,7 @@
             // 
             this.gsRAMTypelabel.AutoSize = true;
             this.gsRAMTypelabel.ForeColor = System.Drawing.Color.Black;
-            this.gsRAMTypelabel.Location = new System.Drawing.Point(31, 53);
+            this.gsRAMTypelabel.Location = new System.Drawing.Point(29, 56);
             this.gsRAMTypelabel.Name = "gsRAMTypelabel";
             this.gsRAMTypelabel.Size = new System.Drawing.Size(58, 13);
             this.gsRAMTypelabel.TabIndex = 27;
@@ -409,9 +411,9 @@
             // 
             this.gsGO.BackColor = System.Drawing.Color.White;
             this.gsGO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gsGO.Location = new System.Drawing.Point(87, 188);
+            this.gsGO.Location = new System.Drawing.Point(32, 175);
             this.gsGO.Name = "gsGO";
-            this.gsGO.Size = new System.Drawing.Size(75, 23);
+            this.gsGO.Size = new System.Drawing.Size(191, 23);
             this.gsGO.TabIndex = 23;
             this.gsGO.Text = "Go";
             this.gsGO.UseVisualStyleBackColor = false;
@@ -450,16 +452,6 @@
             this.presetPC.TabIndex = 3;
             this.presetPC.Text = "Presets";
             this.presetPC.UseVisualStyleBackColor = true;
-            // 
-            // importButton
-            // 
-            this.importButton.Location = new System.Drawing.Point(264, 11);
-            this.importButton.Name = "importButton";
-            this.importButton.Size = new System.Drawing.Size(83, 21);
-            this.importButton.TabIndex = 17;
-            this.importButton.Text = "Import...";
-            this.importButton.UseVisualStyleBackColor = true;
-            this.importButton.Click += new System.EventHandler(this.importButton_Click);
             // 
             // label8
             // 
@@ -544,24 +536,37 @@
             // 
             this.presetPresets.FormattingEnabled = true;
             this.presetPresets.Items.AddRange(new object[] {
-            "Asus Nitro 5 2019 8GB",
-            "Lenovo ThinkPad X270",
-            "PlayStation 5"});
+            "PlayStation 5",
+            "Apple Mac Pro 2023"});
             this.presetPresets.Location = new System.Drawing.Point(8, 11);
             this.presetPresets.Name = "presetPresets";
-            this.presetPresets.Size = new System.Drawing.Size(250, 21);
+            this.presetPresets.Size = new System.Drawing.Size(282, 21);
             this.presetPresets.TabIndex = 0;
             this.presetPresets.SelectedIndexChanged += new System.EventHandler(this.presetPresets_SelectedIndexChanged);
             // 
             // resetPresets
             // 
-            this.resetPresets.Location = new System.Drawing.Point(264, 33);
+            this.resetPresets.BackgroundImage = global::myPC.Properties.Resources.Refresh_icon;
+            this.resetPresets.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resetPresets.Location = new System.Drawing.Point(323, 11);
             this.resetPresets.Name = "resetPresets";
-            this.resetPresets.Size = new System.Drawing.Size(83, 21);
+            this.resetPresets.Size = new System.Drawing.Size(21, 21);
             this.resetPresets.TabIndex = 18;
-            this.resetPresets.Text = "Reset Presets";
+            this.toolTip1.SetToolTip(this.resetPresets, "Reset Presets");
             this.resetPresets.UseVisualStyleBackColor = true;
             this.resetPresets.Click += new System.EventHandler(this.resetPresets_Click);
+            // 
+            // importButton
+            // 
+            this.importButton.BackgroundImage = global::myPC.Properties.Resources._724869;
+            this.importButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.importButton.Location = new System.Drawing.Point(296, 11);
+            this.importButton.Name = "importButton";
+            this.importButton.Size = new System.Drawing.Size(21, 21);
+            this.importButton.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.importButton, "Import Preset");
+            this.importButton.UseVisualStyleBackColor = true;
+            this.importButton.Click += new System.EventHandler(this.importButton_Click);
             // 
             // Form1
             // 
@@ -637,6 +642,7 @@
         private string[][] importedPresets = new string[][]{ };
         private System.Windows.Forms.Button exportButton;
         private System.Windows.Forms.Button resetPresets;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

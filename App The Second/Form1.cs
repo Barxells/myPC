@@ -312,9 +312,8 @@ namespace App_The_Second
         {
             Dictionary<string, string[]> presets = new Dictionary<string, string[]>();
             // Presets in order: CPU, GPU, RAM, RAM Type
-            presets.Add("Asus Nitro 5 2019 8GB", new string[] { "Intel Core i5-9300H", "GeForce GTX 1650", "8", "DDR4" });
-            presets.Add("Lenovo ThinkPad X270", new string[] { "Intel Core i5-7200U", "Intel HD Graphics 620", "8", "DDR4" });
             presets.Add("PlayStation 5", new string[] { "AMD Ryzen 7 3700X", "GeForce RTX 2050", "16", "DDR4" });
+            presets.Add("Apple Mac Pro 2023", new string[] { "Apple M2 Ultra 24 Core", "GeForce RTX 4080", "64", "DDR5" });
             if (anyImportedPresets)
             {
                 foreach (string[] preset in importedPresets)
