@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="myPC.exe" size="492032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="myPC.exe" size="492544">
       <assemblyIdentity name="myPC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wbyTYRUJPGL4L7vOUIILnUI80KwOap0SoV83E50Kvv0=</dsig:DigestValue>
+        <dsig:DigestValue>iZdrFz9xwoZHDQwAStbmKDCoXIsF1cCU0JEGjRquBC8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -76,6 +76,7 @@
             this.resetPresets = new System.Windows.Forms.Button();
             this.importButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.gsPanel.SuspendLayout();
@@ -278,7 +279,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(355, 496);
+            this.tabPage2.Size = new System.Drawing.Size(355, 487);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Requirements";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -448,7 +449,7 @@
             this.presetPC.Controls.Add(this.presetPresets);
             this.presetPC.Location = new System.Drawing.Point(4, 25);
             this.presetPC.Name = "presetPC";
-            this.presetPC.Size = new System.Drawing.Size(355, 496);
+            this.presetPC.Size = new System.Drawing.Size(355, 487);
             this.presetPC.TabIndex = 3;
             this.presetPC.Text = "Presets";
             this.presetPC.UseVisualStyleBackColor = true;
@@ -568,16 +569,27 @@
             this.importButton.UseVisualStyleBackColor = true;
             this.importButton.Click += new System.EventHandler(this.importButton_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(321, 7);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "label9";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(363, 526);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "PC Specs";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -588,6 +600,7 @@
             this.presetPanel.ResumeLayout(false);
             this.presetPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -643,6 +656,7 @@
         private System.Windows.Forms.Button exportButton;
         private System.Windows.Forms.Button resetPresets;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label9;
     }
 }
 

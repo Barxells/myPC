@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "myPC"
-#define MyAppVersion "0.4"
+#define MyAppVersion "1.0.0"
 #define MyAppPublisher "Barxells"
 #define MyAppURL "https://www.github.com/barxells/myPC"
 #define MyAppExeName "myPC.exe"

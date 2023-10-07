@@ -15,6 +15,7 @@ namespace App_The_Second
         {
             InitializeComponent();
             loadPresets();
+            version();
         }
 
         private void loadPresets()
@@ -38,6 +39,10 @@ namespace App_The_Second
             }
         }
 
+        private void version()
+        {
+            label9.Text = "v1.0.0";
+        }
         private void enterer1(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -178,8 +183,10 @@ namespace App_The_Second
         private Dictionary<string, string[]> getGames()
         {
             Dictionary<string, string[]> games = new Dictionary<string, string[]>();
-            games.Add("Minecraft: Java Edition", new string[] { "8", "3", "2214", "343", "100" });
+            games.Add("Cyberpunk 2077", new string[] { "12", "4", "7254", "10072", "70" });
             games.Add("Grand Theft Auto V", new string[] { "8", "3", "4678", "3998", "150" });
+            games.Add("Minecraft: Java Edition", new string[] { "8", "3", "2214", "343", "100" });
+            games.Add("Minecraft: Bedrock Edition", new string[] { "4", "2", "987", "49", "1" });
             /// Add more games later
             return games;
         }
@@ -487,6 +494,11 @@ namespace App_The_Second
                 File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC/presets.dll"));
             }
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
