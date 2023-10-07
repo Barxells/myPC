@@ -5,7 +5,7 @@ aka. pyPC, myPC is a PC specification calculation software, you input the specif
 To install simply download the .zip file from releases, extract it and run setup.exe
 
 ## CPU and GPU
-You can find your CPU and GPU by opening the start menu and typing `dxdiag` and pressing enter. This will open a window with your CPU and GPU listed. The list of [CPUs](https://github.com/Barxells/myPC/blob/master/App%20The%20Second/CPU.list) and [GPUs](https://github.com/Barxells/myPC/blob/master/App%20The%20Second/GPU.list)
+You can find your CPU and GPU by opening the start menu and typing `dxdiag` and pressing enter. This will open a window with your CPU and GPU listed. The list of [CPUs](https://github.com/Barxells/myPC/blob/master/App%20The%20Second/CPU.list) and [GPUs](https://github.com/Barxells/myPC/blob/master/App%20The%20Second/GPU.list) can be found here.
 
 ## Usage
 ### Spec Number
