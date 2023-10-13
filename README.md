@@ -10,8 +10,10 @@ You can find your CPU and GPU by opening the start menu and typing `dxdiag` and 
 ## Usage
 ### Spec Number
 The spec number tab calculates a spec number when given a PCs specs. This number is useful for rating a PCs performance.
+It works through the formula:
+> ((RAM * 0.2) + (RAM Type * 0.1) + (Storage Space * 0.2) + (CPU Passmark Score * 0.3) + (GPU Passmark Score * 0.2)) * 10
 
-### Games (Specs)
+### Requirements
 This tab works out how well a PC can play some games given a PCs specs.
 
 ### Presets
