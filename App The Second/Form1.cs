@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
@@ -16,7 +18,11 @@ namespace App_The_Second
             InitializeComponent();
             loadPresets();
             version();
+            IList<string> presetIlist = presetPresets.Items.Cast<string>().ToList();
+            prePresets = new ReadOnlyCollection<string>(presetIlist).ToArray();
+
         }
+
 
         private void loadPresets()
         {
@@ -41,7 +47,7 @@ namespace App_The_Second
 
         private void version()
         {
-            label9.Text = "v1.0.0";
+            label9.Text = "v1.1.0";
         }
         private void enterer1(object sender, KeyEventArgs e)
         {
@@ -60,7 +66,7 @@ namespace App_The_Second
         }
         private int calculateSpecScore(string CPU, string GPU, string RAM, string RAMType, string Storage)
         {
-            int Score = (int.Parse(RAM) * 300) + (getCPUScore(CPU) * 3) + (getGPUScore(GPU) * 4) + int.Parse(RAMType.Replace("DDR", ""));
+            int Score = (int)(((int.Parse(RAM) * 0.2) + (int.Parse(RAMType.Replace("DDR", "")) * 0.1) + (int.Parse(Storage) * 0.2) + (getCPUScore(CPU) * 0.3) + (getGPUScore(GPU) * 0.2)));
             int miniScore = Score / 100;
             return miniScore;
         }
@@ -493,10 +499,112 @@ namespace App_The_Second
                 Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC"));
                 File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "myPC/presets.dll"));
             }
-            Application.Exit();
+            presetPresets.Items.Clear();
+            foreach (Object item in prePresets)
+            {
+                presetPresets.Items.Add(item);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Compare_Click(object sender, EventArgs e)
+        {
+            compareName.Text = "";
+            compareCPU.Text = "";
+            compareGPU.Text = "";
+            compareRAM.Text = "";
+            Object[] items = presetPresets.Items.Cast<Object>().ToArray();
+            // Sort items by CPU score
+            Array.Sort(items, delegate (Object item1, Object item2)
+            {
+                string[] info1 = getPresetInfo(item1.ToString());
+                string[] info2 = getPresetInfo(item2.ToString());
+                int score1 = getCPUScore(info1[0]);
+                int score2 = getCPUScore(info2[0]);
+                return score2.CompareTo(score1);
+            });
+            foreach (Object item in items)
+            {
+                string[] info = getPresetInfo(item.ToString());
+                // "Preset Name [first 15 chars, if smaller than 15 chars, add spaces to make it 15 chars] - CPU [first 5 chars, if smaller than 5 chars, add spaces to make it 5 chars] - GPU [first 5 chars, if smaller than 5 chars, add spaces to make it 5 chars] - RAM [first 2 chars, if smaller than 2 chars, add spaces to make it 2 chars]GB RAMType [first 4 chars, if smaller than 4 chars, add spaces to make it 4 chars]"
+                string presetName = item.ToString();
+                string presetCPU = getCPUScore(info[0]).ToString();
+                string presetGPU = getGPUScore(info[1]).ToString();
+                string presetRAM = info[2];
+                string presetRAMType = info[3];
+                if (presetName.Length < 19)
+                {
+                    int spacesToAdd = 19 - presetName.Length;
+                    for (int i = 0; i < spacesToAdd; i++)
+                    {
+                        presetName += " ";
+                    }
+                }
+                else if (presetName.Length > 19)
+                {
+                    presetName = presetName.Substring(0, 19);
+                }
+                if (presetCPU.Length < 5)
+                {
+                    int spacesToAdd = 5 - presetCPU.Length;
+                    for (int i = 0; i < spacesToAdd; i++)
+                    {
+                        presetCPU += " ";
+                    }
+                }
+                else if (presetCPU.Length > 5)
+                {
+                    presetCPU = presetCPU.Substring(0, 5);
+                }
+                if (presetGPU.Length < 5)
+                {
+                    int spacesToAdd = 5 - presetGPU.Length;
+                    for (int i = 0; i < spacesToAdd; i++)
+                    {
+                        presetGPU += " ";
+                    }
+                }
+                else if (presetGPU.Length > 5)
+                {
+                    presetGPU = presetGPU.Substring(0, 5);
+                }
+                if (presetRAM.Length < 2)
+                {
+                    int zerosToAdd = 2 - presetRAM.Length;
+                    // Add zeros to the start of the string
+                    for (int i = 0; i < zerosToAdd; i++)
+                    {
+                        presetRAM = "0" + presetRAM;
+                    }
+                }
+                else if (presetRAM.Length > 2)
+                {
+                    presetRAM = presetRAM.Substring(0, 2);
+                }
+                if (presetRAMType.Length < 4)
+                {
+                    int spacesToAdd = 4 - presetRAMType.Length;
+                    for (int i = 0; i < spacesToAdd; i++)
+                    {
+                        presetRAMType += " ";
+                    }
+                }
+                else if (presetRAMType.Length > 4)
+                {
+                    presetRAMType = presetRAMType.Substring(0, 4);
+                }
+                compareName.Text += presetName + "\r\n";
+                compareCPU.Text += presetCPU + "\r\n";
+                compareGPU.Text += presetGPU + "\r\n";
+                compareRAM.Text += presetRAM + "GB " + presetRAMType + "\r\n";
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
