@@ -9,10 +9,13 @@ You can find your CPU and GPU by opening the start menu and typing `dxdiag` and 
 
 ## Usage
 ### Spec Number
-The spec number tab calculates a spec number when given a PCs specs. This number is useful for rating a PCs performance. It can be exported to a .pcspec preset file.
+The spec number tab calculates a spec number when given a PCs specs. This number is useful for rating a PCs performance.
 
 ### Games (Specs)
 This tab works out how well a PC can play some games given a PCs specs.
 
 ### Presets
-This tab shows you specs and spec scores for some presets. It can also show how well those presets play the games mentioned above. You can import custom .pcspec files.
+This tab shows you specs and spec scores for your presets. It can also show how well those presets play certain games. You can import custom .pcspec files.
+
+### Compare
+This tab shows you the info for all of your presets so you can compare them.
