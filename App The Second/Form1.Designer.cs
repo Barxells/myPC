@@ -77,17 +77,17 @@ namespace App_The_Second
             this.presetGPUlabel = new System.Windows.Forms.Label();
             this.presetCPUlabel = new System.Windows.Forms.Label();
             this.presetPresets = new System.Windows.Forms.ComboBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             this.Compare = new System.Windows.Forms.TabPage();
-            this.compareName = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.compareCPU = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label6950705875 = new System.Windows.Forms.Label();
-            this.compareGPU = new System.Windows.Forms.Label();
             this.label385974 = new System.Windows.Forms.Label();
             this.compareRAM = new System.Windows.Forms.Label();
+            this.label6950705875 = new System.Windows.Forms.Label();
+            this.compareGPU = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.compareCPU = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.compareName = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.gsPanel.SuspendLayout();
@@ -582,15 +582,6 @@ namespace App_The_Second
             this.presetPresets.TabIndex = 0;
             this.presetPresets.SelectedIndexChanged += new System.EventHandler(this.presetPresets_SelectedIndexChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(321, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "label9";
-            // 
             // Compare
             // 
             this.Compare.Controls.Add(this.label385974);
@@ -610,38 +601,21 @@ namespace App_The_Second
             this.Compare.UseVisualStyleBackColor = true;
             this.Compare.Enter += new System.EventHandler(this.Compare_Click);
             // 
-            // compareName
+            // label385974
             // 
-            this.compareName.Location = new System.Drawing.Point(34, 33);
-            this.compareName.Name = "compareName";
-            this.compareName.Size = new System.Drawing.Size(115, 456);
-            this.compareName.TabIndex = 0;
+            this.label385974.Location = new System.Drawing.Point(243, 16);
+            this.label385974.Name = "label385974";
+            this.label385974.Size = new System.Drawing.Size(71, 13);
+            this.label385974.TabIndex = 7;
+            this.label385974.Text = "RAM";
+            this.label385974.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // compareRAM
             // 
-            this.label10.Location = new System.Drawing.Point(40, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Name";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // compareCPU
-            // 
-            this.compareCPU.Location = new System.Drawing.Point(155, 33);
-            this.compareCPU.Name = "compareCPU";
-            this.compareCPU.Size = new System.Drawing.Size(38, 456);
-            this.compareCPU.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(155, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "CPU";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.compareRAM.Location = new System.Drawing.Point(243, 33);
+            this.compareRAM.Name = "compareRAM";
+            this.compareRAM.Size = new System.Drawing.Size(71, 456);
+            this.compareRAM.TabIndex = 6;
             // 
             // label6950705875
             // 
@@ -659,21 +633,47 @@ namespace App_The_Second
             this.compareGPU.Size = new System.Drawing.Size(38, 456);
             this.compareGPU.TabIndex = 4;
             // 
-            // label385974
+            // label12
             // 
-            this.label385974.Location = new System.Drawing.Point(243, 16);
-            this.label385974.Name = "label385974";
-            this.label385974.Size = new System.Drawing.Size(71, 13);
-            this.label385974.TabIndex = 7;
-            this.label385974.Text = "RAM";
-            this.label385974.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Location = new System.Drawing.Point(155, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "CPU";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // compareRAM
+            // compareCPU
             // 
-            this.compareRAM.Location = new System.Drawing.Point(243, 33);
-            this.compareRAM.Name = "compareRAM";
-            this.compareRAM.Size = new System.Drawing.Size(71, 456);
-            this.compareRAM.TabIndex = 6;
+            this.compareCPU.Location = new System.Drawing.Point(155, 33);
+            this.compareCPU.Name = "compareCPU";
+            this.compareCPU.Size = new System.Drawing.Size(38, 456);
+            this.compareCPU.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(40, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Name";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // compareName
+            // 
+            this.compareName.Location = new System.Drawing.Point(34, 33);
+            this.compareName.Name = "compareName";
+            this.compareName.Size = new System.Drawing.Size(115, 456);
+            this.compareName.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(321, 7);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "label9";
             // 
             // Form1
             // 
@@ -685,7 +685,7 @@ namespace App_The_Second
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "PC Specs";
+            this.Text = "MyPC";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

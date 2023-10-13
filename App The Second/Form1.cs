@@ -47,7 +47,7 @@ namespace App_The_Second
 
         private void version()
         {
-            label9.Text = "v1.1.0";
+            label9.Text = "v1.1.1b";
         }
         private void enterer1(object sender, KeyEventArgs e)
         {
@@ -66,7 +66,7 @@ namespace App_The_Second
         }
         private int calculateSpecScore(string CPU, string GPU, string RAM, string RAMType, string Storage)
         {
-            int Score = (int)(((int.Parse(RAM) * 0.2) + (int.Parse(RAMType.Replace("DDR", "")) * 0.1) + (int.Parse(Storage) * 0.2) + (getCPUScore(CPU) * 0.3) + (getGPUScore(GPU) * 0.2)));
+            int Score = (int)(((int.Parse(RAM) * 0.2) + (int.Parse(RAMType.Replace("DDR", "")) * 0.1) + (int.Parse(Storage) * 0.2) + (getCPUScore(CPU) * 0.3) + (getGPUScore(GPU) * 0.2))*10);
             int miniScore = Score / 100;
             return miniScore;
         }
@@ -158,19 +158,19 @@ namespace App_The_Second
             progressBar1.Value = 50;
 
             // Give a general "speed"
-            if (Score > 200)
+            if (Score > 1000)
             {
                 label6.Text = "Overkill";
             }
-            else if (Score > 100)
+            else if (Score > 300)
             {
                 label6.Text = "Very Powerful";
             }
-            else if (Score > 70)
+            else if (Score > 150)
             {
                 label6.Text = "Powerful";
             }
-            else if (Score > 40)
+            else if (Score > 90)
             {
                 label6.Text = "Good";
             }
