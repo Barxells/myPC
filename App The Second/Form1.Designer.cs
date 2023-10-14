@@ -119,15 +119,15 @@ namespace App_The_Second
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(355, 496);
+            this.tabPage1.Size = new System.Drawing.Size(370, 496);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Spec Number";
+            this.tabPage1.Text = "Specs";
             // 
             // exportButton
             // 
             this.exportButton.BackColor = System.Drawing.Color.White;
             this.exportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportButton.Location = new System.Drawing.Point(220, 281);
+            this.exportButton.Location = new System.Drawing.Point(227, 281);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(57, 23);
             this.exportButton.TabIndex = 16;
@@ -137,7 +137,7 @@ namespace App_The_Second
             // 
             // disclaimer
             // 
-            this.disclaimer.Location = new System.Drawing.Point(7, 466);
+            this.disclaimer.Location = new System.Drawing.Point(14, 466);
             this.disclaimer.Name = "disclaimer";
             this.disclaimer.Size = new System.Drawing.Size(341, 30);
             this.disclaimer.TabIndex = 15;
@@ -155,7 +155,7 @@ namespace App_The_Second
             "DDR3",
             "DDR4",
             "DDR5"});
-            this.snRAMType.Location = new System.Drawing.Point(155, 159);
+            this.snRAMType.Location = new System.Drawing.Point(162, 159);
             this.snRAMType.MaxLength = 4;
             this.snRAMType.Name = "snRAMType";
             this.snRAMType.Size = new System.Drawing.Size(121, 21);
@@ -163,28 +163,28 @@ namespace App_The_Second
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 186);
+            this.textBox2.Location = new System.Drawing.Point(161, 186);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(122, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 128);
+            this.textBox1.Location = new System.Drawing.Point(162, 128);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 0;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 216);
+            this.textBox4.Location = new System.Drawing.Point(161, 216);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(122, 20);
             this.textBox4.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 246);
+            this.textBox3.Location = new System.Drawing.Point(161, 246);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(122, 20);
             this.textBox3.TabIndex = 3;
@@ -194,7 +194,7 @@ namespace App_The_Second
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(82, 162);
+            this.label7.Location = new System.Drawing.Point(89, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 13;
@@ -204,7 +204,7 @@ namespace App_The_Second
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(156, 353);
+            this.label6.Location = new System.Drawing.Point(163, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 11;
@@ -215,7 +215,7 @@ namespace App_The_Second
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(156, 327);
+            this.label5.Location = new System.Drawing.Point(163, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 9;
@@ -226,7 +226,7 @@ namespace App_The_Second
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(86, 281);
+            this.button1.Location = new System.Drawing.Point(93, 281);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 23);
             this.button1.TabIndex = 8;
@@ -238,7 +238,7 @@ namespace App_The_Second
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(82, 249);
+            this.label4.Location = new System.Drawing.Point(89, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 7;
@@ -248,7 +248,7 @@ namespace App_The_Second
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(82, 131);
+            this.label1.Location = new System.Drawing.Point(89, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
@@ -258,7 +258,7 @@ namespace App_The_Second
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(82, 219);
+            this.label3.Location = new System.Drawing.Point(89, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 6;
@@ -268,7 +268,7 @@ namespace App_The_Second
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(82, 189);
+            this.label2.Location = new System.Drawing.Point(89, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 5;
@@ -276,7 +276,7 @@ namespace App_The_Second
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(114, 327);
+            this.progressBar1.Location = new System.Drawing.Point(121, 327);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(127, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -291,14 +291,14 @@ namespace App_The_Second
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(355, 496);
+            this.tabPage2.Size = new System.Drawing.Size(370, 496);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Requirements";
+            this.tabPage2.Text = "Games";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // gsReset
             // 
-            this.gsReset.Location = new System.Drawing.Point(140, 470);
+            this.gsReset.Location = new System.Drawing.Point(147, 470);
             this.gsReset.Name = "gsReset";
             this.gsReset.Size = new System.Drawing.Size(75, 23);
             this.gsReset.TabIndex = 31;
@@ -320,7 +320,7 @@ namespace App_The_Second
             this.gsPanel.Controls.Add(this.gsGBlabel);
             this.gsPanel.Controls.Add(this.gsRAMTypelabel);
             this.gsPanel.Controls.Add(this.gsGO);
-            this.gsPanel.Location = new System.Drawing.Point(53, 106);
+            this.gsPanel.Location = new System.Drawing.Point(60, 106);
             this.gsPanel.Name = "gsPanel";
             this.gsPanel.Size = new System.Drawing.Size(250, 229);
             this.gsPanel.TabIndex = 30;
@@ -434,7 +434,7 @@ namespace App_The_Second
             // 
             // gsText
             // 
-            this.gsText.Location = new System.Drawing.Point(24, 20);
+            this.gsText.Location = new System.Drawing.Point(31, 20);
             this.gsText.Name = "gsText";
             this.gsText.Size = new System.Drawing.Size(307, 442);
             this.gsText.TabIndex = 29;
@@ -450,7 +450,7 @@ namespace App_The_Second
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(363, 525);
+            this.tabControl1.Size = new System.Drawing.Size(378, 525);
             this.tabControl1.TabIndex = 15;
             // 
             // presetPC
@@ -462,7 +462,7 @@ namespace App_The_Second
             this.presetPC.Controls.Add(this.presetPresets);
             this.presetPC.Location = new System.Drawing.Point(4, 25);
             this.presetPC.Name = "presetPC";
-            this.presetPC.Size = new System.Drawing.Size(355, 496);
+            this.presetPC.Size = new System.Drawing.Size(370, 496);
             this.presetPC.TabIndex = 3;
             this.presetPC.Text = "Presets";
             this.presetPC.UseVisualStyleBackColor = true;
@@ -471,7 +471,7 @@ namespace App_The_Second
             // 
             this.resetPresets.BackgroundImage = global::myPC.Properties.Resources.Refresh_icon;
             this.resetPresets.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.resetPresets.Location = new System.Drawing.Point(323, 11);
+            this.resetPresets.Location = new System.Drawing.Point(336, 11);
             this.resetPresets.Name = "resetPresets";
             this.resetPresets.Size = new System.Drawing.Size(21, 21);
             this.resetPresets.TabIndex = 18;
@@ -483,7 +483,7 @@ namespace App_The_Second
             // 
             this.importButton.BackgroundImage = global::myPC.Properties.Resources._724869;
             this.importButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.importButton.Location = new System.Drawing.Point(296, 11);
+            this.importButton.Location = new System.Drawing.Point(309, 11);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(21, 21);
             this.importButton.TabIndex = 17;
@@ -493,7 +493,7 @@ namespace App_The_Second
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(7, 466);
+            this.label8.Location = new System.Drawing.Point(14, 466);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(341, 30);
             this.label8.TabIndex = 16;
@@ -511,7 +511,7 @@ namespace App_The_Second
             this.presetPanel.Controls.Add(this.presetCPUlabel);
             this.presetPanel.Location = new System.Drawing.Point(8, 38);
             this.presetPanel.Name = "presetPanel";
-            this.presetPanel.Size = new System.Drawing.Size(339, 448);
+            this.presetPanel.Size = new System.Drawing.Size(352, 448);
             this.presetPanel.TabIndex = 1;
             this.presetPanel.Visible = false;
             // 
@@ -519,7 +519,7 @@ namespace App_The_Second
             // 
             this.presetGamingText.Location = new System.Drawing.Point(18, 140);
             this.presetGamingText.Name = "presetGamingText";
-            this.presetGamingText.Size = new System.Drawing.Size(305, 288);
+            this.presetGamingText.Size = new System.Drawing.Size(318, 288);
             this.presetGamingText.TabIndex = 7;
             this.presetGamingText.Visible = false;
             // 
@@ -578,7 +578,7 @@ namespace App_The_Second
             "Apple Mac Pro 2023"});
             this.presetPresets.Location = new System.Drawing.Point(8, 11);
             this.presetPresets.Name = "presetPresets";
-            this.presetPresets.Size = new System.Drawing.Size(282, 21);
+            this.presetPresets.Size = new System.Drawing.Size(295, 21);
             this.presetPresets.TabIndex = 0;
             this.presetPresets.SelectedIndexChanged += new System.EventHandler(this.presetPresets_SelectedIndexChanged);
             // 
@@ -595,7 +595,7 @@ namespace App_The_Second
             this.Compare.Location = new System.Drawing.Point(4, 25);
             this.Compare.Name = "Compare";
             this.Compare.Padding = new System.Windows.Forms.Padding(3);
-            this.Compare.Size = new System.Drawing.Size(355, 496);
+            this.Compare.Size = new System.Drawing.Size(370, 496);
             this.Compare.TabIndex = 4;
             this.Compare.Text = "Compare";
             this.Compare.UseVisualStyleBackColor = true;
@@ -603,7 +603,7 @@ namespace App_The_Second
             // 
             // label385974
             // 
-            this.label385974.Location = new System.Drawing.Point(243, 16);
+            this.label385974.Location = new System.Drawing.Point(251, 16);
             this.label385974.Name = "label385974";
             this.label385974.Size = new System.Drawing.Size(71, 13);
             this.label385974.TabIndex = 7;
@@ -612,14 +612,14 @@ namespace App_The_Second
             // 
             // compareRAM
             // 
-            this.compareRAM.Location = new System.Drawing.Point(243, 33);
+            this.compareRAM.Location = new System.Drawing.Point(251, 33);
             this.compareRAM.Name = "compareRAM";
             this.compareRAM.Size = new System.Drawing.Size(71, 456);
             this.compareRAM.TabIndex = 6;
             // 
             // label6950705875
             // 
-            this.label6950705875.Location = new System.Drawing.Point(199, 16);
+            this.label6950705875.Location = new System.Drawing.Point(207, 16);
             this.label6950705875.Name = "label6950705875";
             this.label6950705875.Size = new System.Drawing.Size(38, 13);
             this.label6950705875.TabIndex = 5;
@@ -628,14 +628,14 @@ namespace App_The_Second
             // 
             // compareGPU
             // 
-            this.compareGPU.Location = new System.Drawing.Point(199, 33);
+            this.compareGPU.Location = new System.Drawing.Point(207, 33);
             this.compareGPU.Name = "compareGPU";
             this.compareGPU.Size = new System.Drawing.Size(38, 456);
             this.compareGPU.TabIndex = 4;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(155, 16);
+            this.label12.Location = new System.Drawing.Point(163, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 13);
             this.label12.TabIndex = 3;
@@ -644,14 +644,14 @@ namespace App_The_Second
             // 
             // compareCPU
             // 
-            this.compareCPU.Location = new System.Drawing.Point(155, 33);
+            this.compareCPU.Location = new System.Drawing.Point(163, 33);
             this.compareCPU.Name = "compareCPU";
             this.compareCPU.Size = new System.Drawing.Size(38, 456);
             this.compareCPU.TabIndex = 2;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(40, 16);
+            this.label10.Location = new System.Drawing.Point(48, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 13);
             this.label10.TabIndex = 1;
@@ -661,7 +661,7 @@ namespace App_The_Second
             // 
             // compareName
             // 
-            this.compareName.Location = new System.Drawing.Point(34, 33);
+            this.compareName.Location = new System.Drawing.Point(42, 33);
             this.compareName.Name = "compareName";
             this.compareName.Size = new System.Drawing.Size(115, 456);
             this.compareName.TabIndex = 0;
@@ -669,7 +669,7 @@ namespace App_The_Second
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(321, 7);
+            this.label9.Location = new System.Drawing.Point(332, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 17;
@@ -680,7 +680,7 @@ namespace App_The_Second
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(363, 526);
+            this.ClientSize = new System.Drawing.Size(378, 526);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

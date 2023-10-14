@@ -47,7 +47,7 @@ namespace App_The_Second
 
         private void version()
         {
-            label9.Text = "v1.1.1b";
+            label9.Text = "v1.1.0";
         }
         private void enterer1(object sender, KeyEventArgs e)
         {
